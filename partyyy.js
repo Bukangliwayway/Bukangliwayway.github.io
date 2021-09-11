@@ -10,7 +10,7 @@ let counter = 0;
 button.addEventListener("click", ()=>{
   party.id = "partyClass";
   party.textContent = "";
-  button.textContent = "";
+  button.textContent = "PARTY";
   button.className = "off";
   button.addEventListener("click", () => location.reload());
   clearInterval(interval);

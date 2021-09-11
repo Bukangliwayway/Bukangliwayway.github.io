@@ -59,7 +59,7 @@ body div button:hover {
 }
 
 body div button:hover::after {
-  content: "! ( ͡° ͜ʖ ͡°)";
+  content: "! 👉👈";
 }
 
 #partyClass {
