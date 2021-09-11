@@ -72,6 +72,6 @@ body div button:hover::after {
 }
 
 .off:hover::after {
-  content: "Partyn't? 😔";
+  content: "n't? 😔";
 }
 /*# sourceMappingURL=style.css.map */
