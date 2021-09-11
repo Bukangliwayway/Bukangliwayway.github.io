@@ -59,7 +59,7 @@ body div button:hover {
 }
 
 body div button:hover::after {
-  content: "! 😈";
+  content: "! ( ͡° ͜ʖ ͡°)";
 }
 
 #partyClass {
@@ -72,6 +72,6 @@ body div button:hover::after {
 }
 
 .off:hover::after {
-  content: "Turn Off 😔";
+  content: "Partyn't? 😔";
 }
 /*# sourceMappingURL=style.css.map */
