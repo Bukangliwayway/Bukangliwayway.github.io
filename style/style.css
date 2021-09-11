@@ -1,0 +1,77 @@
+@charset "UTF-8";
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #eee;
+  height: 90vh;
+  width: 100vw;
+}
+
+body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+}
+
+body div h1 {
+  min-height: 3.65rem;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+body div button {
+  margin: -1rem;
+  width: 7rem;
+  height: 3rem;
+  -webkit-transition: background 0.5s, font-size 0.2s;
+  transition: background 0.5s, font-size 0.2s;
+  border: grey solid 1px;
+  border-radius: 5%;
+}
+
+body div button:hover {
+  background: grey;
+  color: black;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+body div button:hover::after {
+  content: "! 😈";
+}
+
+#partyClass {
+  min-height: 3.65rem;
+  width: 50vw;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: fantasy;
+}
+
+.off:hover::after {
+  content: "Turn Off 😔";
+}
+/*# sourceMappingURL=style.css.map */
