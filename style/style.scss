@@ -28,6 +28,7 @@ body {
     }
     button {
       @include button();
+      text-transform: uppercase;
       &:hover {
         background: grey;
         color: black;

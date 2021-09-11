@@ -49,6 +49,7 @@ body div button {
   transition: background 0.5s, font-size 0.2s;
   border: grey solid 1px;
   border-radius: 5%;
+  text-transform: uppercase;
 }
 
 body div button:hover {
