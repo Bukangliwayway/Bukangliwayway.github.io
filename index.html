@@ -1,80 +1,485 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tangy Mango - Premium Pickled Mangoes</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%);
+    }
+    
+    /* Navigation */
+    nav {
+        background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    nav .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    nav .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    nav .logo img {
+        height: 50px;
+        width: auto;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        padding: 8px 16px;
+        border-radius: 20px;
+    }
+    
+    nav a:hover {
+        background: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+    
+    /* Container */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    /* Section Styles */
+    section {
+        padding: 60px 20px;
+        min-height: 80vh;
+    }
+    
+    /* Homepage */
+    #home {
+        background: url('https://i.ibb.co/YFdf8xNn/cover-photo.png') center/cover no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 90vh;
+    }
+    
+    #home::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.4);
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        max-width: 800px;
+        padding: 40px;
+        background: rgba(255,107,53,0.9);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+    
+    .hero-content img.logo-large {
+        width: 180px;
+        height: auto;
+        margin-bottom: 20px;
+        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background: white;
+        color: #FF6B35;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        background: #FFF8E1;
+    }
+    
+    /* Products Section */
+    #products {
+        background: white;
+    }
+    
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #FF6B35;
+        margin-bottom: 50px;
+        position: relative;
+        padding-bottom: 15px;
+    }
+    
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(90deg, #FF6B35, #F7931E);
+        border-radius: 2px;
+    }
+    
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        margin-top: 40px;
+    }
+    
+    .product-card {
+        background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 35px rgba(255,107,53,0.3);
+    }
+    
+    .product-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    
+    .product-info {
+        padding: 30px;
+    }
+    
+    .product-info h3 {
+        color: #FF6B35;
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .product-info p {
+        color: #555;
+        line-height: 1.8;
+    }
+    
+    /* Contact Section */
+    #contact {
+        background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        color: white;
+    }
+    
+    #contact h2 {
+        color: white;
+    }
+    
+    #contact h2::after {
+        background: white;
+    }
+    
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-top: 40px;
+    }
+    
+    .about-section h3,
+    .contact-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        padding-bottom: 10px;
+    }
+    
+    .about-section p {
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+    
+    .contact-info {
+        background: rgba(255,255,255,0.1);
+        padding: 40px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: start;
+        gap: 15px;
+        margin-bottom: 25px;
+        padding: 15px;
+        background: rgba(255,255,255,0.1);
+        border-radius: 10px;
+    }
+    
+    .contact-item strong {
+        font-size: 1.1rem;
+        min-width: 100px;
+    }
+    
+    .contact-item a {
+        color: white;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+    
+    .contact-item a:hover {
+        border-bottom-color: white;
+    }
+    
+    /* Footer */
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    footer p {
+        margin-bottom: 10px;
+    }
+    
+    footer a {
+        color: #F7931E;
+        text-decoration: none;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        nav .container {
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        nav ul {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 2rem;
+        }
+        
+        .hero-content p {
+            font-size: 1rem;
+        }
+        
+        .contact-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .products-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+```
+
 </head>
 <body>
-    <header>
+    <!-- Navigation -->
+    <nav>
         <div class="container">
-            <div class="nav-brand">
-                <img src="https://i.ibb.co/zWrNVrks/logo.png" alt="Tangy Mango Logo" class="logo">
-                <h1>Tangy Mango</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+            <a href="#home" class="logo">
+                <img src="https://i.ibb.co/zWrNVrks/logo.png" alt="Tangy Mango Logo">
+                <span>Tangy Mango</span>
+            </a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <img src="https://i.ibb.co/YFdf8xNn/cover-photo.png" alt="Tangy Mango Cover" class="cover-image">
-                <div class="hero-text">
-                    <h2>Welcome to Tangy Mango</h2>
-                    <p class="tagline">Premium Pickled Mangoes with Distinctive Tangy-Sweet Flavor</p>
-                    <a href="products.html" class="cta-button">View Our Products</a>
+```
+<!-- Homepage Section -->
+<section id="home">
+    <div class="hero-content">
+        <img src="https://i.ibb.co/zWrNVrks/logo.png" alt="Tangy Mango Logo" class="logo-large">
+        <h1>Tangy Mango</h1>
+        <p>Tangy Mango is dedicated to offering premium pickled mangoes with a distinctive tangy-sweet flavor. Through the natural process of fermentation, our products are preserved using only organic compounds such as vinegar, salt, and sugar. This method allows beneficial microorganisms to enhance the mangoes' flavor, aroma, and shelf life — ensuring both quality and freshness.</p>
+        <p>We take pride in maintaining high standards of quality and food safety, ensuring that every jar is crafted with care and made from carefully selected, fresh mangoes. Our fermentation process not only preserves the fruit naturally but also promotes gut-friendly benefits, making Tangy Mango a delicious and health-conscious choice for every consumer.</p>
+        <a href="#products" class="btn">Explore Our Products</a>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products">
+    <div class="container">
+        <h2>Our Premium Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://i.ibb.co/vxPwkWhT/pickled-mango.png" alt="Classic Pickled Mango">
+                <div class="product-info">
+                    <h3>Classic Pickled Mango</h3>
+                    <p>The Classic Pickled Mango offers a natural blend of tangy and sweet flavors, preserved through fermentation using vinegar, salt, and sugar. This process enhances the mango's freshness and extends its shelf life while promoting beneficial probiotics that support healthy digestion.</p>
                 </div>
             </div>
-        </section>
+            
+            <div class="product-card">
+                <img src="https://i.ibb.co/SXg1KS10/chili-pickled-mango.png" alt="Chili Pickled Mango">
+                <div class="product-info">
+                    <h3>Chili Pickled Mango</h3>
+                    <p>The Chili Pickled Mango combines the natural sourness of pickled mango with the mild heat of real chili peppers. Made through a fermentation process using organic ingredients, it contains beneficial microorganisms that aid in digestion and support gut health, providing a flavorful yet health-conscious snack choice.</p>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.ibb.co/hF8yfVcR/garlic-pickled-mango.png" alt="Garlic Pickled Mango">
+                <div class="product-info">
+                    <h3>Garlic Pickled Mango</h3>
+                    <p>The Garlic Pickled Mango is infused with the rich flavor and aroma of real garlic, creating a distinct and savory taste. Naturally fermented, it is rich in antioxidants and probiotics that help strengthen the immune system and promote healthy digestion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section class="intro">
-            <div class="container">
-                <h3>About Tangy Mango</h3>
-                <p>Tangy Mango is dedicated to offering premium pickled mangoes with a distinctive tangy-sweet flavor. Through the natural process of fermentation, our products are preserved using only organic compounds such as vinegar, salt, and sugar. This method allows beneficial microorganisms to enhance the mangoes' flavor, aroma, and shelf life — ensuring both quality and freshness.</p>
-                
-                <p>We take pride in maintaining high standards of quality and food safety, ensuring that every jar is crafted with care and made from carefully selected, fresh mangoes. Our fermentation process not only preserves the fruit naturally but also promotes gut-friendly benefits, making Tangy Mango a delicious and health-conscious choice for every consumer.</p>
-                
+<!-- Contact/About Section -->
+<section id="contact">
+    <div class="container">
+        <h2>About Us & Contact</h2>
+        <div class="contact-content">
+            <div class="about-section">
+                <h3>Our Story</h3>
                 <p>Each jar of Tangy Mango represents our commitment to providing customers with a naturally crafted, flavorful, and memorable snack experience that highlights the authentic taste of mango.</p>
+                <p>We believe in the power of traditional fermentation methods combined with modern food safety standards to create products that are not only delicious but also beneficial for your health.</p>
+                <p>Our dedication to quality means selecting only the finest mangoes and using natural preservation methods that have been trusted for generations. Every batch is carefully monitored to ensure consistency in flavor and quality.</p>
             </div>
-        </section>
-
-        <section class="featured-products">
-            <div class="container">
-                <h3>Our Featured Products</h3>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src="https://i.ibb.co/4RRFLzPk/product-photo.png" alt="Classic Pickled Mango">
-                        <h4>Classic Pickled Mango</h4>
-                        <p>Natural blend of tangy and sweet flavors</p>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://i.ibb.co/SXg1KS10/chili-pickled-mango.png" alt="Chili Pickled Mango">
-                        <h4>Chili Pickled Mango</h4>
-                        <p>Perfect combination of sourness and mild heat</p>
-                    </div>
-                    <div class="product-card">
-                        <img src="https://i.ibb.co/hF8yfVcR/garlic-pickled-mango.png" alt="Garlic Pickled Mango">
-                        <h4>Garlic Pickled Mango</h4>
-                        <p>Rich flavor infused with real garlic</p>
-                    </div>
+            
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <div class="contact-item">
+                    <strong>Email:</strong>
+                    <a href="mailto:balsomofiona@gmail.com">balsomofiona@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Phone:</strong>
+                    <a href="tel:+639855484367">+639855484367</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Address:</strong>
+                    <span>Brgy. Commonwealth, Quezon City</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Visit Us:</strong>
+                    <a href="https://www.google.com/maps/place/Commonwealth,+Quezon+City" target="_blank">View on Google Maps</a>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Tangy Mango. All rights reserved.</p>
-            <p>Contact us at: balsomofiona@gmail.com | +639855484367</p>
         </div>
-    </footer>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Tangy Mango. All rights reserved.</p>
+    <p>Naturally fermented, traditionally crafted, proudly Filipino.</p>
+</footer>
+
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Add active state to navigation
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.style.background = '';
+            if (link.getAttribute('href') === `#${current}`) {
+                link.style.background = 'rgba(255,255,255,0.2)';
+            }
+        });
+    });
+</script>
+```
+
 </body>
 </html>
