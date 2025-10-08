@@ -15,18 +15,17 @@
     body {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.6;
-        color: #333;
-        background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%);
+        color: #2d5016;
+        background: linear-gradient(135deg, #f7fce4 0%, #e8f5c8 100%);
     }
     
-    /* Navigation */
     nav {
-        background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        background: linear-gradient(135deg, #7cb342 0%, #9ccc65 100%);
         padding: 1rem 0;
         position: sticky;
         top: 0;
         z-index: 1000;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
     }
     
     nav .container {
@@ -73,20 +72,17 @@
         transform: translateY(-2px);
     }
     
-    /* Container */
     .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
     }
     
-    /* Section Styles */
     section {
         padding: 60px 20px;
         min-height: 80vh;
     }
     
-    /* Homepage */
     #home {
         background: url('https://i.ibb.co/YFdf8xNn/cover-photo.png') center/cover no-repeat;
         position: relative;
@@ -104,7 +100,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0,0,0,0.4);
+        background: rgba(76, 175, 80, 0.5);
     }
     
     .hero-content {
@@ -113,7 +109,7 @@
         color: white;
         max-width: 800px;
         padding: 40px;
-        background: rgba(255,107,53,0.9);
+        background: linear-gradient(135deg, rgba(124, 179, 66, 0.95) 0%, rgba(156, 204, 101, 0.95) 100%);
         border-radius: 20px;
         box-shadow: 0 8px 32px rgba(0,0,0,0.3);
     }
@@ -141,7 +137,7 @@
         display: inline-block;
         padding: 15px 40px;
         background: white;
-        color: #FF6B35;
+        color: #558b2f;
         text-decoration: none;
         border-radius: 30px;
         font-weight: bold;
@@ -152,10 +148,9 @@
     .btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-        background: #FFF8E1;
+        background: #f1f8e9;
     }
     
-    /* Products Section */
     #products {
         background: white;
     }
@@ -163,7 +158,7 @@
     h2 {
         text-align: center;
         font-size: 2.5rem;
-        color: #FF6B35;
+        color: #558b2f;
         margin-bottom: 50px;
         position: relative;
         padding-bottom: 15px;
@@ -177,7 +172,7 @@
         transform: translateX(-50%);
         width: 100px;
         height: 4px;
-        background: linear-gradient(90deg, #FF6B35, #F7931E);
+        background: linear-gradient(90deg, #7cb342, #9ccc65);
         border-radius: 2px;
     }
     
@@ -189,7 +184,7 @@
     }
     
     .product-card {
-        background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%);
+        background: linear-gradient(135deg, #f1f8e9 0%, #dcedc8 100%);
         border-radius: 20px;
         overflow: hidden;
         box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -198,7 +193,7 @@
     
     .product-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 12px 35px rgba(255,107,53,0.3);
+        box-shadow: 0 12px 35px rgba(124, 179, 66, 0.4);
     }
     
     .product-card img {
@@ -212,19 +207,18 @@
     }
     
     .product-info h3 {
-        color: #FF6B35;
+        color: #558b2f;
         font-size: 1.8rem;
         margin-bottom: 15px;
     }
     
     .product-info p {
-        color: #555;
+        color: #33691e;
         line-height: 1.8;
     }
     
-    /* Contact Section */
     #contact {
-        background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+        background: linear-gradient(135deg, #7cb342 0%, #9ccc65 100%);
         color: white;
     }
     
@@ -257,7 +251,7 @@
     }
     
     .contact-info {
-        background: rgba(255,255,255,0.1);
+        background: rgba(255,255,255,0.15);
         padding: 40px;
         border-radius: 20px;
         backdrop-filter: blur(10px);
@@ -289,9 +283,8 @@
         border-bottom-color: white;
     }
     
-    /* Footer */
     footer {
-        background: #333;
+        background: #33691e;
         color: white;
         text-align: center;
         padding: 30px 20px;
@@ -302,11 +295,10 @@
     }
     
     footer a {
-        color: #F7931E;
+        color: #aed581;
         text-decoration: none;
     }
     
-    /* Responsive */
     @media (max-width: 768px) {
         nav .container {
             flex-direction: column;
@@ -319,28 +311,98 @@
             gap: 1rem;
         }
         
+        nav .logo {
+            font-size: 1.3rem;
+        }
+        
+        nav .logo img {
+            height: 40px;
+        }
+        
+        section {
+            padding: 40px 15px;
+            min-height: auto;
+        }
+        
+        .hero-content {
+            padding: 30px 20px;
+        }
+        
+        .hero-content img.logo-large {
+            width: 120px;
+        }
+        
         .hero-content h1 {
             font-size: 2rem;
         }
         
         .hero-content p {
-            font-size: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            font-size: 0.95rem;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
         }
         
         .contact-content {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 30px;
+        }
+        
+        .about-section h3,
+        .contact-info h3 {
+            font-size: 1.5rem;
+        }
+        
+        .about-section p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+        
+        .contact-info {
+            padding: 25px 20px;
+        }
+        
+        .contact-item {
+            flex-direction: column;
+            gap: 8px;
+            padding: 12px;
+        }
+        
+        .contact-item strong {
+            font-size: 1rem;
+            min-width: auto;
         }
         
         .products-grid {
             grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.5rem;
+        }
+        
+        .product-info p {
+            font-size: 0.95rem;
         }
     }
 </style>
 
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <a href="#home" class="logo">
@@ -354,7 +416,8 @@
             </ul>
         </div>
     </nav>
-<!-- Homepage Section -->
+
+```
 <section id="home">
     <div class="hero-content">
         <img src="https://i.ibb.co/zWrNVrks/logo.png" alt="Tangy Mango Logo" class="logo-large">
@@ -365,7 +428,6 @@
     </div>
 </section>
 
-<!-- Products Section -->
 <section id="products">
     <div class="container">
         <h2>Our Premium Products</h2>
@@ -397,7 +459,6 @@
     </div>
 </section>
 
-<!-- Contact/About Section -->
 <section id="contact">
     <div class="container">
         <h2>About Us & Contact</h2>
@@ -432,14 +493,12 @@
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     <p>&copy; 2025 Tangy Mango. All rights reserved.</p>
     <p>Naturally fermented, traditionally crafted, proudly Filipino.</p>
 </footer>
 
 <script>
-    // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -453,7 +512,6 @@
         });
     });
 
-    // Add active state to navigation
     window.addEventListener('scroll', () => {
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('nav a[href^="#"]');
